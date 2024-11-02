@@ -52,6 +52,11 @@ $ emulator -avd <AVD_NAME>
 
  Or attach physical device (Make sure the host system JAVA is compatible with flutter projects android gradle)
 
+### Resources
+- [Android SDK - Command line tools Installation (Detailed)](https://www.youtube.com/watch?v=wvi03sOBKWQ)
+- [android emulator](https://www.youtube.com/playlist?list=PLTyVJ9m1QDNcgm8l2xovDSm9YrT6y5wzx)
+- [Flutter Course for Beginners – 37-hour Cross Platform App Development Tutorial](https://www.youtube.com/watch?v=VPvVD8t02U8)
+
 ## Misc
 - [env-variables](https://developer.android.com/tools/variables)
 - [adb-android-device-unauthorized](https://stackoverflow.com/questions/23081263/adb-android-device-unauthorized)
