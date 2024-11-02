@@ -55,6 +55,9 @@ $ emulator -avd <AVD_NAME>
 ### Resources
 - [Android SDK - Command line tools Installation (Detailed)](https://www.youtube.com/watch?v=wvi03sOBKWQ)
 - [android emulator](https://www.youtube.com/playlist?list=PLTyVJ9m1QDNcgm8l2xovDSm9YrT6y5wzx)
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [online documentation](https://docs.flutter.dev/)
 - [Flutter Course for Beginners – 37-hour Cross Platform App Development Tutorial](https://www.youtube.com/watch?v=VPvVD8t02U8)
 - [Flutter Course for Absolute Beginners | 2024 Latest](https://www.youtube.com/watch?v=DsTMhjaRQws)
 - [Flutter Tutorial - Full Course - Project Based](https://www.youtube.com/watch?v=OO_-MbnXQzY)
