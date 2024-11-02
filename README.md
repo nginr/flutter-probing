@@ -5,7 +5,7 @@ Figuring out flutter with bits and pieces of android build system gotchas.
 ### Download and unzip the [flutter](https://docs.flutter.dev/get-started/install/linux/android#download-then-install-flutter) and android [commandline-tools](https://developer.android.com/studio#command-tools) in `~/opt`.
 
 ```bash
-$ cd ~/opt
+$ mkdir -p ~/opt && cd ~/opt
 $ tar -xvf ~/opt/flutter_linux_XXXXX-stable.tar.xz
 $ unzip ~/opt/commandlinetools-linux-XXXXXXXX_latest.zip
 $ mkdir -p ~/opt/android/cmdline-tools/latest
@@ -36,13 +36,14 @@ Tools • Dart 3.5.4 • DevTools 2.37.3
 ### Install Android SDK through [`sdkmanager`](https://developer.android.com/tools/sdkmanager)
 ```bash
 $ sdkmanager --install "cmdline-tools;latest"
-$ sdkmanager "platforms;android-26" "build-tools;26.0.0" "system-images;android-26;google_apis;x86"
+$ sdkmanager "platform-tools" "platforms;android-26" "build-tools;26.0.0" "system-images;android-26;google_apis;x86"
 $ sdkmanager --list_installed
 ```
 
 ### Create AVD and configure Emulator
 
 ```bash
+$ sdkmanager "emulator"
 $ avdmanager list device
 $ avdmanager create avd -n <AVD_NAME> -k "system-images;android-26;google_apis;x86" \
      --device "Nexus 5" --sdcard 512M --tag "default" --abi "google_apis/x86"
