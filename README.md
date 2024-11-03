@@ -39,10 +39,10 @@ in `~/opt/cmdline-tools/` may not be up-to-date. Download the `latest` by using 
 and then remove `~/opt/cmdline-tools/` directory.
 
 ```bash
-$ ~/opt/cmdline-tools/bin/sdkmanager "cmdline-tools;latest"
-$ rm -rvf ~/opt/cmdline-tools/
-$ sdkmanager "tools" "platform-tools" "platforms;android-26" \
-      "build-tools;26.0.0" "emulator" "system-images;android-26;google_apis;x86"
+$ ~/opt/cmdline-tools/bin/sdkmanager --sdk_root=~/opt/android/ "cmdline-tools;latest"
+$ rm -rf ~/opt/cmdline-tools/
+$ sdkmanager "tools" "platform-tools" "emulator" \
+        "build-tools;26.0.0" "platforms;android-26" "system-images;android-26;google_apis;x86"
 $ sdkmanager --list_installed
 ```
 
