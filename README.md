@@ -14,14 +14,15 @@ $ mv ~/opt/cmdline-tools/* ~/opt/android/cmdline-tools/latest/
 
 ### Update `PATH` variable (`~/.bashrc` or `~/.bash_profile`)
 ```bash
-export PATH="$PATH:$HOME/opt/flutter/bin"
-
+export FLUTTER_HOME="$PATH:$HOME/opt/flutter"
 export ANDROID_HOME="$HOME/opt/android"
 export ANDROID_EMULATOR_HOME="$XDG_CONFIG_HOME/.android"
 export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
-export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+
+export PATH="$PATH:$FLUTTER_HOME/bin"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$ANDROID_HOME/emulator"
 ```
 
 ### Check flutter version
@@ -35,15 +36,14 @@ Tools • Dart 3.5.4 • DevTools 2.37.3
 
 ### Install Android SDK through [`sdkmanager`](https://developer.android.com/tools/sdkmanager)
 ```bash
-$ sdkmanager --install "cmdline-tools;latest"
-$ sdkmanager "platform-tools" "platforms;android-26" "build-tools;26.0.0" "system-images;android-26;google_apis;x86"
+$ sdkmanager "tools" "cmdline-tools;latest" "platform-tools" "platforms;android-26" \
+      "build-tools;26.0.0" "emulator" "system-images;android-26;google_apis;x86"
 $ sdkmanager --list_installed
 ```
 
 ### Create AVD and configure Emulator
 
 ```bash
-$ sdkmanager "emulator"
 $ avdmanager list device
 $ avdmanager create avd -n <AVD_NAME> -k "system-images;android-26;google_apis;x86" \
      --device "Nexus 5" --sdcard 512M --tag "default" --abi "google_apis/x86"
