@@ -40,6 +40,7 @@ and then remove `~/opt/cmdline-tools/` directory.
 
 ```bash
 $ ~/opt/cmdline-tools/bin/sdkmanager "cmdline-tools;latest"
+$ rm -rvf ~/opt/cmdline-tools/
 $ sdkmanager "tools" "platform-tools" "platforms;android-26" \
       "build-tools;26.0.0" "emulator" "system-images;android-26;google_apis;x86"
 $ sdkmanager --list_installed
