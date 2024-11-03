@@ -9,7 +9,6 @@ $ mkdir -p ~/opt && cd ~/opt
 $ tar -xvf ~/opt/flutter_linux_XXXXX-stable.tar.xz
 $ unzip ~/opt/commandlinetools-linux-XXXXXXXX_latest.zip
 $ mkdir -p ~/opt/android/cmdline-tools/latest
-$ mv ~/opt/cmdline-tools/* ~/opt/android/cmdline-tools/latest/
 ```
 
 ### Update `PATH` variable (`~/.bashrc` or `~/.bash_profile`)
@@ -35,8 +34,13 @@ Tools • Dart 3.5.4 • DevTools 2.37.3
 ```
 
 ### Install Android SDK through [`sdkmanager`](https://developer.android.com/tools/sdkmanager)
+The android [commandline-tools](https://developer.android.com/studio#command-tools)
+in `~/opt/cmdline-tools/` may not be up-to-date. Download the `latest` by using `~/opt/cmdline-tools/bin/sdkmanager`
+and then remove `~/opt/cmdline-tools/` directory.
+
 ```bash
-$ sdkmanager "tools" "cmdline-tools;latest" "platform-tools" "platforms;android-26" \
+$ ~/opt/cmdline-tools/bin/sdkmanager "cmdline-tools;latest"
+$ sdkmanager "tools" "platform-tools" "platforms;android-26" \
       "build-tools;26.0.0" "emulator" "system-images;android-26;google_apis;x86"
 $ sdkmanager --list_installed
 ```
